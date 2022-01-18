@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="math.js"></script>
+    <title>Thần số học</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container">
+          <div class="nav-translate">
+            <a class="navbar-brand" href="#" rel="tooltip">
+              <img src="img\logo.png" style="width: 15vh;">
+            </a>
+          </div>
+          <button type="button" class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"> <a class="nav-link text-dark smooth scroll" href="#">Trang Chủ</a> </li>
+              <li class="nav-item"> <a class="nav-link text-dark smooth scroll" href="#">Tìm Hiểu</a> </li>
+              <li class="nav-item"> <a class="nav-link text-dark smooth scroll" href="#">Tra Cứu</a> </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="input" id="input">
+      <div class="input_header">
+        THÔNG TIN TRA CỨU
+      </div>
+      <div class="input_area">
+        <div class="input_row">
+          <div class="input_name">
+            Ngày sinh:
+          </div>
+          <input type="number" class="input_field" placeholder="00" id="ngay" required>
+        </div>
+        <div class="input_row">
+          <div class="input_name">
+            Tháng sinh:
+          </div>
+          <input type="number" class="input_field" placeholder="00" id="thang" required>
+        </div>
+        <div class="input_row">
+          <div class="input_name">
+            Năm sinh:
+          </div>
+          <input type="number" class="input_field" placeholder="0000" id="nam" required>
+        </div>
+        <div class="input_row">
+          <div class="input_name">
+            Họ và tên (không dấu):
+          </div>
+          <input type="text" class="input_field" placeholder="Nguyen Van A" id="ten" required>
+        </div>
+      </div>
+      <div class="input_footer">
+        <button onclick="myFunction()">Kiểm Tra</button>
+      </div>
+    </div>
+
+    <div class="output">
+      <div class="output_row" id="print_ns">
+
+      </div>
+      <div class="output_row" id="print_td">
+
+      </div>
+      <div class="output_row" id="print_dd">
+
+      </div>
+      <div class="output_row" id="print_lh">
+
+      </div>
+      <div class="output_row" id="print_nc">
+
+      </div>
+    </div>
+
+    </div>
+
+      <script>
+        function myFunction()
+        {
+          var ng = document.getElementById("ngay").value;
+          ng = parseFloat(ng);
+          var th = document.getElementById("thang").value;
+          th = parseFloat(th);
+          var na = document.getElementById("nam").value;
+          na = parseFloat(na);
+          var ten = document.getElementById("ten").value
+          TinhToan(ng, th, na, ten);
+        }
+      </script>
+    </div>
+  </body>
+  <footer>
+    <p></p>
+  </footer>
+</html>
