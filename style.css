@@ -94,7 +94,11 @@ button {
 .output_row span {
   color: var(--color-1);
 }
-
+.output_row h3 {
+  color: var(--color-1);
+  font-size: 1rem;
+  font-weight: bold;
+}
 footer {
   padding: 0.5rem 0;
 }
